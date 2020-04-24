@@ -1,17 +1,21 @@
 // jshint esversion: 6
 
-let controller = function(){
-
-    let prefixURL = "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
+let main = function(){
+/*
+    let prefixURL = "http://api.flickr.com/services/feeds/photos_public.gne?tags=";
     let suffixURL = "&format=json&jsoncallback=?";
     //get value entered by user from textbox
-    let flickrTag = $("input").val();
-    let requestURL = prefixURL + flickrTag + suffixURL;
+    let flickrTag = $("input").???();
+    */
+    let requestURL = 'http://thejsway-server.herokuapp.com/api/articles';
 
+/*
     //clear old photos
-    $(".photos").html("");
-
-  $.getJSON(requestURL, function(flickrResponse) {
+    $(".photos").???("");
+*/
+  $.getJSON(requestURL, function(response) {
+    console.log(response);
+    /*
     flickrResponse.items.forEach(function(item, index) {
 
       //Flickr returns 20 images by default
@@ -34,15 +38,9 @@ let controller = function(){
     });
 
   });
-};
-
-
-//$(document).ready(controller);
-//Register the controller after the DOM is complete
-window.addEventListener("load", () => {
-  //select the button
-  let button = document.querySelector("button");
-
-  //register the click handler for the button
-  button.addEventListener("click", controller);
+  */
 });
+
+
+//$(document).ready(main);
+};

@@ -14,3 +14,17 @@ let containsDuplicates = s => {
   }
   return false;
 };
+
+
+let revWords1 = s => {
+  let reverse;
+  let split = s.split("");
+  for (var i = 0; i < reverse.length; i++) {
+  reverse ="";
+  for (var j = split[i].length-1;j>=0;j--){
+    reverse+=split[i][j];
+  }
+  split[i]=reverse
+}
+  returnreverse.join(" ");
+};
