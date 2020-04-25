@@ -15,12 +15,31 @@ let containsDuplicates = s => {
   return false;
 };
 
-
+//Reverse Words 1 with for loop
 let revWords1 = s => {
-  let letters = s.split(" ");
   let result = "";
   for (let i = 0; i <s.length; i++) {
     result = s[i] + result;
+  }
+  return result;
+};
+
+//Reverse Words 2 with .forEach method
+let revWords2 = s => {
+  let arr = s.split('');
+  let result = "";
+  arr.forEach((char) => {
+  result = char + result;
+});
+  return result;
+};
+
+//Reverse Words 3 with for of loop
+let revWords3 = s => {
+    let result ="";
+
+  for(char of s){
+    result = char +result;
   }
   return result;
 };
