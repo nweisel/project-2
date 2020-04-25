@@ -17,14 +17,10 @@ let containsDuplicates = s => {
 
 
 let revWords1 = s => {
-  let reverse;
-  let split = s.split("");
-  for (var i = 0; i < reverse.length; i++) {
-  reverse ="";
-  for (var j = split[i].length-1;j>=0;j--){
-    reverse+=split[i][j];
+  let letters = s.split(" ");
+  let result = "";
+  for (let i = 0; i <s.length; i++) {
+    result = s[i] + result;
   }
-  split[i]=reverse
-}
-  returnreverse.join(" ");
+  return result;
 };
